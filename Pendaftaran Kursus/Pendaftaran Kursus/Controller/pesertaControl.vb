@@ -85,4 +85,34 @@ Public Class pesertaControl
             End If
         End If
     End Sub
+
+    Private Sub btnGridSearch_Click(sender As Object, e As EventArgs) Handles btnGridSearch.Click
+        Dim keyword As String = txtGridSearch.Text.Trim()
+
+        Try
+            Dim conn = DBConnection.OpenConnection()
+            Dim query As String = "SELECT id, kode_peserta, nama_peserta, alamat, no_handphone, email
+                                   FROM public.peserta WHERE (is_deleted is NULL OR is_deleted = 0)
+                                   AND (kode_peserta ILIKE @kw OR nama_peserta ILIKE @kw OR alamat ILIKE @kw OR no_handphone ILIKE @kw OR email ILIKE @kw)
+                                   ORDER BY id ASC"
+
+            Dim cmd As New NpgsqlCommand(query, conn)
+            cmd.Parameters.AddWithValue("@kw", "%" & keyword & "%")
+
+            Dim adapter As New NpgsqlDataAdapter(cmd)
+            Dim table As New DataTable()
+            adapter.Fill(table)
+            DataGridPeserta.DataSource = table
+
+        Catch ex As Exception
+            MessageBox.Show("Gagal mencari data: " & ex.Message)
+
+        Finally
+            DBConnection.closeConnection()
+        End Try
+    End Sub
+
+    Private Sub txtGridSearch_TextChanged(sender As Object, e As EventArgs) Handles txtGridSearch.TextChanged
+        btnGridSearch.PerformClick()
+    End Sub
 End Class

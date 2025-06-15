@@ -26,23 +26,25 @@ Partial Class pesertaControl
         btnGridTambah = New Button()
         btnGridKembali = New Button()
         btnGridHapus = New Button()
+        txtGridSearch = New TextBox()
+        btnGridSearch = New Button()
         CType(DataGridPeserta, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' DataGridPeserta
         ' 
         DataGridPeserta.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridPeserta.Location = New Point(50, 111)
+        DataGridPeserta.Location = New Point(68, 114)
         DataGridPeserta.Name = "DataGridPeserta"
         DataGridPeserta.RowHeadersWidth = 51
-        DataGridPeserta.Size = New Size(840, 388)
+        DataGridPeserta.Size = New Size(800, 388)
         DataGridPeserta.TabIndex = 0
         ' 
         ' btnGridTambah
         ' 
         btnGridTambah.BackColor = Color.RoyalBlue
         btnGridTambah.ForeColor = Color.White
-        btnGridTambah.Location = New Point(532, 33)
+        btnGridTambah.Location = New Point(510, 35)
         btnGridTambah.Name = "btnGridTambah"
         btnGridTambah.Size = New Size(104, 43)
         btnGridTambah.TabIndex = 1
@@ -53,7 +55,7 @@ Partial Class pesertaControl
         ' 
         btnGridKembali.BackColor = Color.FromArgb(CByte(255), CByte(128), CByte(0))
         btnGridKembali.ForeColor = Color.White
-        btnGridKembali.Location = New Point(786, 33)
+        btnGridKembali.Location = New Point(764, 35)
         btnGridKembali.Name = "btnGridKembali"
         btnGridKembali.Size = New Size(104, 43)
         btnGridKembali.TabIndex = 2
@@ -64,12 +66,29 @@ Partial Class pesertaControl
         ' 
         btnGridHapus.BackColor = Color.Red
         btnGridHapus.ForeColor = Color.White
-        btnGridHapus.Location = New Point(658, 33)
+        btnGridHapus.Location = New Point(636, 35)
         btnGridHapus.Name = "btnGridHapus"
         btnGridHapus.Size = New Size(104, 43)
         btnGridHapus.TabIndex = 3
         btnGridHapus.Text = "Hapus"
         btnGridHapus.UseVisualStyleBackColor = False
+        ' 
+        ' txtGridSearch
+        ' 
+        txtGridSearch.Location = New Point(121, 43)
+        txtGridSearch.Name = "txtGridSearch"
+        txtGridSearch.Size = New Size(270, 27)
+        txtGridSearch.TabIndex = 4
+        ' 
+        ' btnGridSearch
+        ' 
+        btnGridSearch.BackColor = Color.White
+        btnGridSearch.Location = New Point(73, 43)
+        btnGridSearch.Name = "btnGridSearch"
+        btnGridSearch.Size = New Size(36, 27)
+        btnGridSearch.TabIndex = 5
+        btnGridSearch.Text = "🔎"
+        btnGridSearch.UseVisualStyleBackColor = False
         ' 
         ' pesertaControl
         ' 
@@ -77,6 +96,8 @@ Partial Class pesertaControl
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.DarkBlue
         BackgroundImageLayout = ImageLayout.Zoom
+        Controls.Add(btnGridSearch)
+        Controls.Add(txtGridSearch)
         Controls.Add(btnGridHapus)
         Controls.Add(btnGridKembali)
         Controls.Add(btnGridTambah)
@@ -85,11 +106,14 @@ Partial Class pesertaControl
         Size = New Size(942, 536)
         CType(DataGridPeserta, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents DataGridPeserta As DataGridView
     Friend WithEvents btnGridTambah As Button
     Friend WithEvents btnGridKembali As Button
     Friend WithEvents btnGridHapus As Button
+    Friend WithEvents txtGridSearch As TextBox
+    Friend WithEvents btnGridSearch As Button
 
 End Class
