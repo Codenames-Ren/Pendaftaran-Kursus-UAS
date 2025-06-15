@@ -134,7 +134,7 @@ Partial Class formPeserta
         btnSimpan.Name = "btnSimpan"
         btnSimpan.Size = New Size(99, 30)
         btnSimpan.TabIndex = 10
-        btnSimpan.Text = "Tambah"
+        btnSimpan.Text = "Simpan"
         btnSimpan.UseVisualStyleBackColor = False
         ' 
         ' btnReset

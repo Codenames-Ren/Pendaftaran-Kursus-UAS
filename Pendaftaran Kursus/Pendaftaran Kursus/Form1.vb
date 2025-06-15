@@ -10,4 +10,7 @@
         PanelContent.Controls.Add(control)
     End Sub
 
+    Private Sub KursusToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles KursusToolStripMenuItem.Click
+        LoadMenu(New kursusControl)
+    End Sub
 End Class
