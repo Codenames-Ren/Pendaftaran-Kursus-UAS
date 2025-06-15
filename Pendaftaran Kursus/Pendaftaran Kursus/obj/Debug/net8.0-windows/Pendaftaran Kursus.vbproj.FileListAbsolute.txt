@@ -1,0 +1,23 @@
+D:\Mata-Kuliah\Pemrograman Visual 1\UAS\Pendaftaran Kursus\Pendaftaran Kursus\bin\Debug\net8.0-windows\Pendaftaran Kursus.exe
+D:\Mata-Kuliah\Pemrograman Visual 1\UAS\Pendaftaran Kursus\Pendaftaran Kursus\bin\Debug\net8.0-windows\Pendaftaran Kursus.deps.json
+D:\Mata-Kuliah\Pemrograman Visual 1\UAS\Pendaftaran Kursus\Pendaftaran Kursus\bin\Debug\net8.0-windows\Pendaftaran Kursus.runtimeconfig.json
+D:\Mata-Kuliah\Pemrograman Visual 1\UAS\Pendaftaran Kursus\Pendaftaran Kursus\bin\Debug\net8.0-windows\Pendaftaran Kursus.dll
+D:\Mata-Kuliah\Pemrograman Visual 1\UAS\Pendaftaran Kursus\Pendaftaran Kursus\bin\Debug\net8.0-windows\Pendaftaran Kursus.pdb
+D:\Mata-Kuliah\Pemrograman Visual 1\UAS\Pendaftaran Kursus\Pendaftaran Kursus\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Mata-Kuliah\Pemrograman Visual 1\UAS\Pendaftaran Kursus\Pendaftaran Kursus\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Mata-Kuliah\Pemrograman Visual 1\UAS\Pendaftaran Kursus\Pendaftaran Kursus\bin\Debug\net8.0-windows\Npgsql.dll
+D:\Mata-Kuliah\Pemrograman Visual 1\UAS\Pendaftaran Kursus\Pendaftaran Kursus\obj\Debug\net8.0-windows\Pendaftaran Kursus.vbproj.AssemblyReference.cache
+D:\Mata-Kuliah\Pemrograman Visual 1\UAS\Pendaftaran Kursus\Pendaftaran Kursus\obj\Debug\net8.0-windows\Pendaftaran_Kursus.pesertaControl.resources
+D:\Mata-Kuliah\Pemrograman Visual 1\UAS\Pendaftaran Kursus\Pendaftaran Kursus\obj\Debug\net8.0-windows\Pendaftaran_Kursus.Form1.resources
+D:\Mata-Kuliah\Pemrograman Visual 1\UAS\Pendaftaran Kursus\Pendaftaran Kursus\obj\Debug\net8.0-windows\Pendaftaran_Kursus.formPeserta.resources
+D:\Mata-Kuliah\Pemrograman Visual 1\UAS\Pendaftaran Kursus\Pendaftaran Kursus\obj\Debug\net8.0-windows\Pendaftaran Kursus.vbproj.GenerateResource.cache
+D:\Mata-Kuliah\Pemrograman Visual 1\UAS\Pendaftaran Kursus\Pendaftaran Kursus\obj\Debug\net8.0-windows\Pendaftaran Kursus.GeneratedMSBuildEditorConfig.editorconfig
+D:\Mata-Kuliah\Pemrograman Visual 1\UAS\Pendaftaran Kursus\Pendaftaran Kursus\obj\Debug\net8.0-windows\Pendaftaran Kursus.AssemblyInfoInputs.cache
+D:\Mata-Kuliah\Pemrograman Visual 1\UAS\Pendaftaran Kursus\Pendaftaran Kursus\obj\Debug\net8.0-windows\Pendaftaran Kursus.AssemblyInfo.vb
+D:\Mata-Kuliah\Pemrograman Visual 1\UAS\Pendaftaran Kursus\Pendaftaran Kursus\obj\Debug\net8.0-windows\Pendaftaran Kursus.vbproj.CoreCompileInputs.cache
+D:\Mata-Kuliah\Pemrograman Visual 1\UAS\Pendaftaran Kursus\Pendaftaran Kursus\obj\Debug\net8.0-windows\Pendafta.200C7E03.Up2Date
+D:\Mata-Kuliah\Pemrograman Visual 1\UAS\Pendaftaran Kursus\Pendaftaran Kursus\obj\Debug\net8.0-windows\Pendaftaran Kursus.dll
+D:\Mata-Kuliah\Pemrograman Visual 1\UAS\Pendaftaran Kursus\Pendaftaran Kursus\obj\Debug\net8.0-windows\refint\Pendaftaran Kursus.dll
+D:\Mata-Kuliah\Pemrograman Visual 1\UAS\Pendaftaran Kursus\Pendaftaran Kursus\obj\Debug\net8.0-windows\Pendaftaran Kursus.pdb
+D:\Mata-Kuliah\Pemrograman Visual 1\UAS\Pendaftaran Kursus\Pendaftaran Kursus\obj\Debug\net8.0-windows\Pendaftaran Kursus.genruntimeconfig.cache
+D:\Mata-Kuliah\Pemrograman Visual 1\UAS\Pendaftaran Kursus\Pendaftaran Kursus\obj\Debug\net8.0-windows\ref\Pendaftaran Kursus.dll
