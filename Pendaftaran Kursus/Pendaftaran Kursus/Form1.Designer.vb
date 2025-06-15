@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         MenuStrip1 = New MenuStrip()
         PesertaToolStripMenuItem = New ToolStripMenuItem()
         KursusToolStripMenuItem = New ToolStripMenuItem()
@@ -32,45 +33,52 @@ Partial Class Form1
         ' 
         ' MenuStrip1
         ' 
+        MenuStrip1.BackColor = Color.RoyalBlue
         MenuStrip1.ImageScalingSize = New Size(20, 20)
         MenuStrip1.Items.AddRange(New ToolStripItem() {PesertaToolStripMenuItem, KursusToolStripMenuItem, PendaftaranKursusToolStripMenuItem})
         MenuStrip1.Location = New Point(0, 0)
         MenuStrip1.Name = "MenuStrip1"
-        MenuStrip1.Size = New Size(1051, 28)
+        MenuStrip1.Size = New Size(963, 28)
         MenuStrip1.TabIndex = 0
         MenuStrip1.Text = "MenuStrip1"
         ' 
         ' PesertaToolStripMenuItem
         ' 
+        PesertaToolStripMenuItem.ForeColor = Color.White
         PesertaToolStripMenuItem.Name = "PesertaToolStripMenuItem"
         PesertaToolStripMenuItem.Size = New Size(106, 24)
         PesertaToolStripMenuItem.Text = "Data Peserta"
         ' 
         ' KursusToolStripMenuItem
         ' 
+        KursusToolStripMenuItem.ForeColor = Color.White
         KursusToolStripMenuItem.Name = "KursusToolStripMenuItem"
         KursusToolStripMenuItem.Size = New Size(101, 24)
         KursusToolStripMenuItem.Text = "Data Kursus"
         ' 
         ' PendaftaranKursusToolStripMenuItem
         ' 
+        PendaftaranKursusToolStripMenuItem.ForeColor = Color.White
         PendaftaranKursusToolStripMenuItem.Name = "PendaftaranKursusToolStripMenuItem"
         PendaftaranKursusToolStripMenuItem.Size = New Size(148, 24)
         PendaftaranKursusToolStripMenuItem.Text = "Pendaftaran Kursus"
         ' 
         ' PanelContent
         ' 
+        PanelContent.BackColor = Color.DarkBlue
+        PanelContent.BackgroundImage = CType(resources.GetObject("PanelContent.BackgroundImage"), Image)
+        PanelContent.BackgroundImageLayout = ImageLayout.Zoom
         PanelContent.Dock = DockStyle.Fill
         PanelContent.Location = New Point(0, 28)
         PanelContent.Name = "PanelContent"
-        PanelContent.Size = New Size(1051, 569)
+        PanelContent.Size = New Size(963, 541)
         PanelContent.TabIndex = 1
         ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1051, 597)
+        ClientSize = New Size(963, 569)
         Controls.Add(PanelContent)
         Controls.Add(MenuStrip1)
         MainMenuStrip = MenuStrip1

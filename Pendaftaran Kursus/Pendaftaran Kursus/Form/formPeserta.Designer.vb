@@ -33,8 +33,6 @@ Partial Class formPeserta
         txtNoHP = New TextBox()
         txtEmail = New TextBox()
         btnSimpan = New Button()
-        btnEdit = New Button()
-        btnHapus = New Button()
         btnReset = New Button()
         SuspendLayout()
         ' 
@@ -139,31 +137,9 @@ Partial Class formPeserta
         btnSimpan.Text = "Tambah"
         btnSimpan.UseVisualStyleBackColor = False
         ' 
-        ' btnEdit
-        ' 
-        btnEdit.BackColor = Color.Orange
-        btnEdit.ForeColor = Color.White
-        btnEdit.Location = New Point(210, 408)
-        btnEdit.Name = "btnEdit"
-        btnEdit.Size = New Size(99, 30)
-        btnEdit.TabIndex = 11
-        btnEdit.Text = "Edit"
-        btnEdit.UseVisualStyleBackColor = False
-        ' 
-        ' btnHapus
-        ' 
-        btnHapus.BackColor = Color.Red
-        btnHapus.ForeColor = Color.White
-        btnHapus.Location = New Point(324, 408)
-        btnHapus.Name = "btnHapus"
-        btnHapus.Size = New Size(99, 30)
-        btnHapus.TabIndex = 12
-        btnHapus.Text = "Hapus"
-        btnHapus.UseVisualStyleBackColor = False
-        ' 
         ' btnReset
         ' 
-        btnReset.BackColor = Color.RoyalBlue
+        btnReset.BackColor = Color.FromArgb(CByte(255), CByte(128), CByte(0))
         btnReset.ForeColor = Color.White
         btnReset.Location = New Point(324, 354)
         btnReset.Name = "btnReset"
@@ -177,10 +153,8 @@ Partial Class formPeserta
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.DarkBlue
-        ClientSize = New Size(534, 454)
+        ClientSize = New Size(534, 421)
         Controls.Add(btnReset)
-        Controls.Add(btnHapus)
-        Controls.Add(btnEdit)
         Controls.Add(btnSimpan)
         Controls.Add(txtEmail)
         Controls.Add(txtNoHP)
@@ -209,7 +183,5 @@ Partial Class formPeserta
     Friend WithEvents txtNoHP As TextBox
     Friend WithEvents txtEmail As TextBox
     Friend WithEvents btnSimpan As Button
-    Friend WithEvents btnEdit As Button
-    Friend WithEvents btnHapus As Button
     Friend WithEvents btnReset As Button
 End Class
