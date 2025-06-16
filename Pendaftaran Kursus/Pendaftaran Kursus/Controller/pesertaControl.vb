@@ -31,7 +31,13 @@ Public Class pesertaControl
     End Sub
 
     Private Sub DataGridPeserta_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridPeserta.CellDoubleClick
-        If e.RowIndex >= 0 Then
+        If e.RowIndex < 0 OrElse e.ColumnIndex < 0 Then Exit Sub
+
+        Dim row = DataGridPeserta.Rows(e.RowIndex)
+
+        If IsDBNull(row.Cells("id").Value) Then Exit Sub
+
+        Try
             Dim selectedRow = DataGridPeserta.Rows(e.RowIndex)
             Dim editForm As New formPeserta()
             editForm.idEdit = selectedRow.Cells("id").Value
@@ -43,24 +49,35 @@ Public Class pesertaControl
 
             AddHandler editForm.FormClosed, AddressOf refreshGrid
             editForm.Show()
-        End If
+
+        Catch ex As Exception
+            MessageBox.Show("Gagal membuka data untuk diedit: " & ex.Message)
+        End Try
     End Sub
 
     Private Sub btnGridHapus_Click(sender As Object, e As EventArgs) Handles btnGridHapus.Click
         If DataGridPeserta.SelectedRows.Count > 0 Then
-            Dim idPeserta = DataGridPeserta.SelectedRows(0).Cells("id").Value
-            Dim result = MessageBox.Show("Yakin ingin menghapus data ini?", "Konfirmasi", MessageBoxButtons.YesNo)
+            Dim selectedRow = DataGridPeserta.SelectedRows(0)
+
+            If selectedRow.Cells("id").Value Is Nothing OrElse IsDBNull(selectedRow.Cells("id").Value) Then
+                MessageBox.Show("Tidak ada data yang dipilih untuk dihapus!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                Exit Sub
+            End If
+
+            Dim idPeserta = selectedRow.Cells("id").Value
+            Dim result = MessageBox.Show("Yakin ingin menghapus data peserta ini?", "Konfirmasi", MessageBoxButtons.YesNo)
+
             If result = DialogResult.Yes Then
                 Try
                     Dim conn = DBConnection.OpenConnection()
                     Dim cmd = New NpgsqlCommand("UPDATE public.peserta SET is_deleted = 1 WHERE id = @id", conn)
-                    cmd.Parameters.AddWithValue("@id", idPeserta)
 
+                    cmd.Parameters.AddWithValue("@id", idPeserta)
                     cmd.ExecuteNonQuery()
-                    MessageBox.Show("Data berhasil dihapus!")
+                    MessageBox.Show("Data berhasil dihapus.")
                     LoadDataPeserta()
                 Catch ex As Exception
-                    MessageBox.Show("Gagal Menghapus Data: " & ex.Message)
+                    MessageBox.Show("Gagal menghapus data: " & ex.Message)
 
                 Finally
                     DBConnection.closeConnection()
@@ -68,7 +85,7 @@ Public Class pesertaControl
             End If
 
         Else
-            MessageBox.Show("Pilih data yang ingin dihapus!")
+            MessageBox.Show("Pilih data peserta yang ingin dihapus!")
         End If
     End Sub
 

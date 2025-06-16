@@ -65,7 +65,14 @@ Public Class kursusControl
 
     Private Sub btnGridHapus_Click(sender As Object, e As EventArgs) Handles btnGridHapus.Click
         If DataGridKursus.SelectedRows.Count > 0 Then
-            Dim idKursus = DataGridKursus.SelectedRows(0).Cells("id").Value
+            Dim selectedRow = DataGridKursus.SelectedRows(0)
+
+            If selectedRow.Cells("id").Value Is Nothing OrElse IsDBNull(selectedRow.Cells("id").Value) Then
+                MessageBox.Show("Tidak ada data valid yang dipilih untuk dihapus!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                Exit Sub
+            End If
+
+            Dim idKursus = selectedRow.Cells("id").Value
             Dim result = MessageBox.Show("Yakin ingin menghapus kursus ini?", "Konfirmasi", MessageBoxButtons.YesNo)
             If result = DialogResult.Yes Then
                 Try

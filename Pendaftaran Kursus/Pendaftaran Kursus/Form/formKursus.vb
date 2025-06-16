@@ -61,10 +61,26 @@ Public Class formKursus
             cmd.ExecuteNonQuery()
 
             MessageBox.Show("Data berhasil disimpan!")
+
+            Try
+                Dim api As New APIService()
+                Dim dataProperties As String = txtKodeKursus.Text.Trim() & "|" &
+                                   txtNamaKursus.Text.Trim() & "|" &
+                                   cmbJadwalHari.SelectedItem.ToString() & "|" &
+                                   txtDurasi.Text.Trim() & "|" &
+                                   txtLamaKursus.Text.Trim() & "|" &
+                                   txtMentorKursus.Text.Trim()
+
+                api.send("kursus", dataProperties)
+                MessageBox.Show("Pengiriman data ke API berhasil!")
+            Catch exApi As Exception
+                MessageBox.Show("Data tersimpan, tapi gagal mengirim ke API: " & exApi.Message, "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                MessageBox.Show("Gagal kirim ke API: " & exApi.Message)
+                Console.WriteLine("Error kirim API: " & exApi.ToString())
+            End Try
             Me.Close()
         Catch ex As Exception
             MessageBox.Show("Gagal menyimpan data: " & ex.Message)
-
         Finally
             DBConnection.closeConnection()
         End Try
