@@ -17,4 +17,8 @@
     Private Sub PendaftaranKursusToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PendaftaranKursusToolStripMenuItem.Click
         LoadMenu(New PendaftaranControl)
     End Sub
+
+    Private Sub LaporanToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LaporanToolStripMenuItem.Click
+        formLaporan.Show()
+    End Sub
 End Class

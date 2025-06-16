@@ -51,3 +51,16 @@ D:\Mata-Kuliah\Pemrograman Visual 1\UAS\Pendaftaran-Kursus-UAS\Pendaftaran Kursu
 D:\Mata-Kuliah\Pemrograman Visual 1\UAS\Pendaftaran-Kursus-UAS\Pendaftaran Kursus\Pendaftaran Kursus\obj\Debug\net8.0-windows\Pendaftaran_Kursus.PendaftaranControl.resources
 D:\Mata-Kuliah\Pemrograman Visual 1\UAS\Pendaftaran-Kursus-UAS\Pendaftaran Kursus\Pendaftaran Kursus\obj\Debug\net8.0-windows\Pendaftaran_Kursus.formPendaftaranKursus.resources
 D:\Mata-Kuliah\Pemrograman Visual 1\UAS\Pendaftaran-Kursus-UAS\Pendaftaran Kursus\Pendaftaran Kursus\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+D:\Mata-Kuliah\Pemrograman Visual 1\UAS\Pendaftaran-Kursus-UAS\Pendaftaran Kursus\Pendaftaran Kursus\obj\Debug\net8.0-windows\Pendaftaran_Kursus.formLaporan.resources
+D:\Mata-Kuliah\Pemrograman Visual 1\UAS\Pendaftaran-Kursus-UAS\Pendaftaran Kursus\Pendaftaran Kursus\bin\Debug\net8.0-windows\BouncyCastle.Cryptography.dll
+D:\Mata-Kuliah\Pemrograman Visual 1\UAS\Pendaftaran-Kursus-UAS\Pendaftaran Kursus\Pendaftaran Kursus\bin\Debug\net8.0-windows\itextsharp.dll
+D:\Mata-Kuliah\Pemrograman Visual 1\UAS\Pendaftaran-Kursus-UAS\Pendaftaran Kursus\Pendaftaran Kursus\obj\Debug\net8.0-windows\Interop.Microsoft.Office.Interop.Excel.dll
+D:\Mata-Kuliah\Pemrograman Visual 1\UAS\Pendaftaran-Kursus-UAS\Pendaftaran Kursus\Pendaftaran Kursus\obj\Debug\net8.0-windows\Pendaftaran Kursus.vbproj.ResolveComReference.cache
+D:\Mata-Kuliah\Pemrograman Visual 1\UAS\Pendaftaran-Kursus-UAS\Pendaftaran Kursus\Pendaftaran Kursus\bin\Debug\net8.0-windows\ClosedXML.dll
+D:\Mata-Kuliah\Pemrograman Visual 1\UAS\Pendaftaran-Kursus-UAS\Pendaftaran Kursus\Pendaftaran Kursus\bin\Debug\net8.0-windows\ClosedXML.Parser.dll
+D:\Mata-Kuliah\Pemrograman Visual 1\UAS\Pendaftaran-Kursus-UAS\Pendaftaran Kursus\Pendaftaran Kursus\bin\Debug\net8.0-windows\DocumentFormat.OpenXml.dll
+D:\Mata-Kuliah\Pemrograman Visual 1\UAS\Pendaftaran-Kursus-UAS\Pendaftaran Kursus\Pendaftaran Kursus\bin\Debug\net8.0-windows\DocumentFormat.OpenXml.Framework.dll
+D:\Mata-Kuliah\Pemrograman Visual 1\UAS\Pendaftaran-Kursus-UAS\Pendaftaran Kursus\Pendaftaran Kursus\bin\Debug\net8.0-windows\ExcelNumberFormat.dll
+D:\Mata-Kuliah\Pemrograman Visual 1\UAS\Pendaftaran-Kursus-UAS\Pendaftaran Kursus\Pendaftaran Kursus\bin\Debug\net8.0-windows\RBush.dll
+D:\Mata-Kuliah\Pemrograman Visual 1\UAS\Pendaftaran-Kursus-UAS\Pendaftaran Kursus\Pendaftaran Kursus\bin\Debug\net8.0-windows\SixLabors.Fonts.dll
+D:\Mata-Kuliah\Pemrograman Visual 1\UAS\Pendaftaran-Kursus-UAS\Pendaftaran Kursus\Pendaftaran Kursus\bin\Debug\net8.0-windows\System.IO.Packaging.dll

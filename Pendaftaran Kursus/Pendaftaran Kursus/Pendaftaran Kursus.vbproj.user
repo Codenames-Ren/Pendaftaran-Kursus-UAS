@@ -16,6 +16,9 @@
     <Compile Update="Form\formKursus.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Form\formLaporan.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Form\formPendaftaranKursus.vb">
       <SubType>Form</SubType>
     </Compile>

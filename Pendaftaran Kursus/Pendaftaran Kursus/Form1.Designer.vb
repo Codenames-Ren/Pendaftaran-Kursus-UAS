@@ -28,6 +28,7 @@ Partial Class Form1
         KursusToolStripMenuItem = New ToolStripMenuItem()
         PendaftaranKursusToolStripMenuItem = New ToolStripMenuItem()
         PanelContent = New Panel()
+        LaporanToolStripMenuItem = New ToolStripMenuItem()
         MenuStrip1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -35,7 +36,7 @@ Partial Class Form1
         ' 
         MenuStrip1.BackColor = Color.RoyalBlue
         MenuStrip1.ImageScalingSize = New Size(20, 20)
-        MenuStrip1.Items.AddRange(New ToolStripItem() {PesertaToolStripMenuItem, KursusToolStripMenuItem, PendaftaranKursusToolStripMenuItem})
+        MenuStrip1.Items.AddRange(New ToolStripItem() {PesertaToolStripMenuItem, KursusToolStripMenuItem, PendaftaranKursusToolStripMenuItem, LaporanToolStripMenuItem})
         MenuStrip1.Location = New Point(0, 0)
         MenuStrip1.Name = "MenuStrip1"
         MenuStrip1.Size = New Size(963, 28)
@@ -74,6 +75,13 @@ Partial Class Form1
         PanelContent.Size = New Size(963, 541)
         PanelContent.TabIndex = 1
         ' 
+        ' LaporanToolStripMenuItem
+        ' 
+        LaporanToolStripMenuItem.ForeColor = Color.White
+        LaporanToolStripMenuItem.Name = "LaporanToolStripMenuItem"
+        LaporanToolStripMenuItem.Size = New Size(77, 24)
+        LaporanToolStripMenuItem.Text = "Laporan"
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -95,5 +103,6 @@ Partial Class Form1
     Friend WithEvents KursusToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PendaftaranKursusToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PanelContent As Panel
+    Friend WithEvents LaporanToolStripMenuItem As ToolStripMenuItem
 
 End Class
