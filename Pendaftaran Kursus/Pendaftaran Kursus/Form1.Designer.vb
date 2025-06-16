@@ -27,8 +27,8 @@ Partial Class Form1
         PesertaToolStripMenuItem = New ToolStripMenuItem()
         KursusToolStripMenuItem = New ToolStripMenuItem()
         PendaftaranKursusToolStripMenuItem = New ToolStripMenuItem()
-        PanelContent = New Panel()
         LaporanToolStripMenuItem = New ToolStripMenuItem()
+        PanelContent = New Panel()
         MenuStrip1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -64,6 +64,13 @@ Partial Class Form1
         PendaftaranKursusToolStripMenuItem.Size = New Size(148, 24)
         PendaftaranKursusToolStripMenuItem.Text = "Pendaftaran Kursus"
         ' 
+        ' LaporanToolStripMenuItem
+        ' 
+        LaporanToolStripMenuItem.ForeColor = Color.White
+        LaporanToolStripMenuItem.Name = "LaporanToolStripMenuItem"
+        LaporanToolStripMenuItem.Size = New Size(77, 24)
+        LaporanToolStripMenuItem.Text = "Laporan"
+        ' 
         ' PanelContent
         ' 
         PanelContent.BackColor = Color.DarkBlue
@@ -74,13 +81,6 @@ Partial Class Form1
         PanelContent.Name = "PanelContent"
         PanelContent.Size = New Size(963, 541)
         PanelContent.TabIndex = 1
-        ' 
-        ' LaporanToolStripMenuItem
-        ' 
-        LaporanToolStripMenuItem.ForeColor = Color.White
-        LaporanToolStripMenuItem.Name = "LaporanToolStripMenuItem"
-        LaporanToolStripMenuItem.Size = New Size(77, 24)
-        LaporanToolStripMenuItem.Text = "Laporan"
         ' 
         ' Form1
         ' 

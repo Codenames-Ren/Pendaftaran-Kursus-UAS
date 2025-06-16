@@ -69,7 +69,7 @@ Public Class formKursus
                                    cmbJadwalHari.SelectedItem.ToString() & "|" &
                                    txtDurasi.Text.Trim() & "|" &
                                    txtLamaKursus.Text.Trim() & "|" &
-                                   txtMentorKursus.Text.Trim()
+                                   txtMentorKursus.Text.Trim() & "|" & "testing"
 
                 api.send("kursus", dataProperties)
                 MessageBox.Show("Pengiriman data ke API berhasil!")

@@ -9,9 +9,12 @@ Public Class kursusControl
     Public Sub LoadDataKursus()
         Try
             Dim conn = DBConnection.OpenConnection()
-            Dim query As String = "SELECT id, kode_kursus, nama_kursus, jadwal_hari, durasi, lama_kursus, mentor
-                                   FROM public.kursus WHERE is_deleted IS NULL OR is_deleted = 0
-                                   ORDER BY id ASC"
+            Dim query As String = "SELECT id, kode_kursus, nama_kursus, CASE jadwal_hari
+                                   WHEN 1 THEN 'Senin' WHEN 2 THEN 'Selasa' WHEN 3 THEN 'Rabu'
+                                   WHEN 4 THEN 'Kamis' WHEN 5 THEN 'Jumat' WHEN 6 THEN 'Sabtu'
+                                   WHEN 7 THEN 'Minggu' ELSE 'Tidak Diketahui' END AS jadwal_hari,
+                                   durasi || ' Jam' AS durasi, lama_kursus || ' Minggu' AS lama_kursus, mentor
+                                   FROM public.kursus WHERE is_deleted IS NULL OR is_deleted = 0 ORDER BY id ASC"
 
             Dim cmd = New NpgsqlCommand(query, conn)
             Dim adapter = New NpgsqlDataAdapter(cmd)
@@ -46,21 +49,35 @@ Public Class kursusControl
         Try
             Dim editForm As New formKursus
             editForm.InitComboJadwal()
-
             editForm.idEdit = row.Cells("id").Value
             editForm.txtKodeKursus.Text = row.Cells("kode_kursus").Value.ToString()
             editForm.txtNamaKursus.Text = row.Cells("nama_kursus").Value.ToString()
-            editForm.cmbJadwalHari.SelectedIndex = Convert.ToInt32(row.Cells("jadwal_hari").Value) - 1
-            editForm.txtDurasi.Text = row.Cells("durasi").Value.ToString()
-            editForm.txtLamaKursus.Text = row.Cells("lama_kursus").Value.ToString()
+
+            Select Case row.Cells("jadwal_hari").Value.ToString().ToLower()
+                Case "senin" : editForm.cmbJadwalHari.SelectedIndex = 0
+                Case "selasa" : editForm.cmbJadwalHari.SelectedIndex = 1
+                Case "rabu" : editForm.cmbJadwalHari.SelectedIndex = 2
+                Case "kamis" : editForm.cmbJadwalHari.SelectedIndex = 3
+                Case "jumat" : editForm.cmbJadwalHari.SelectedIndex = 4
+                Case "sabtu" : editForm.cmbJadwalHari.SelectedIndex = 5
+                Case "minggu" : editForm.cmbJadwalHari.SelectedIndex = 6
+                Case Else : editForm.cmbJadwalHari.SelectedIndex = -1
+            End Select
+
+            ' Ambil angka dari string yang ada di grid
+            Dim durasiStr = row.Cells("durasi").Value.ToString().Replace(" Jam", "").Trim()
+            Dim lamaStr = row.Cells("lama_kursus").Value.ToString().Replace(" Minggu", "").Trim()
+
+            editForm.txtDurasi.Text = durasiStr
+            editForm.txtLamaKursus.Text = lamaStr
             editForm.txtMentorKursus.Text = row.Cells("mentor").Value.ToString()
 
             AddHandler editForm.FormClosed, AddressOf refreshGrid
             editForm.Show()
-
         Catch ex As Exception
             MessageBox.Show("Gagal membuka data untuk diedit: " & ex.Message)
         End Try
+
     End Sub
 
     Private Sub btnGridHapus_Click(sender As Object, e As EventArgs) Handles btnGridHapus.Click
@@ -99,10 +116,13 @@ Public Class kursusControl
         Dim keyword As String = txtGridSearch.Text.Trim()
         Try
             Dim conn = DBConnection.OpenConnection()
-            Dim query As String = "SELECT id, kode_kursus, nama_kursus, jadwal_hari, durasi, lama_kursus, mentor
+            Dim query As String = "SELECT id, kode_kursus, nama_kursus, CASE jadwal_hari
+                                   WHEN 1 THEN 'Senin' WHEN 2 THEN 'Selasa' WHEN 3 THEN 'Rabu'
+                                   WHEN 4 THEN 'Kamis' WHEN 5 THEN 'Jumat' WHEN 6 THEN 'Sabtu'
+                                   WHEN 7 THEN 'Minggu' ELSE 'Tidak Diketahui' END AS jadwal_hari,
+                                   durasi || ' Jam' AS durasi, lama_kursus || ' Minggu' AS lama_kursus, mentor
                                    FROM public.kursus WHERE (is_deleted IS NULL OR is_deleted = 0)
-                                   AND (kode_kursus ILIKE @kw OR nama_kursus ILIKE @kw OR mentor ILIKE @kw)
-                                   ORDER BY id ASC"
+                                   AND (kode_kursus ILIKE @kw OR nama_kursus ILIKE @kw OR mentor ILIKE @kw) ORDER BY id ASC"
 
             Dim cmd = New NpgsqlCommand(query, conn)
             cmd.Parameters.AddWithValue("@kw", "%" & keyword & "%")

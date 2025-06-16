@@ -32,6 +32,7 @@ Partial Class formLaporan
         btnExportToPDF = New Button()
         btnExportToExcel = New Button()
         dataGridLaporan = New DataGridView()
+        btnKembali = New Button()
         CType(dataGridLaporan, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -94,7 +95,7 @@ Partial Class formLaporan
         ' 
         btnPreview.BackColor = Color.RoyalBlue
         btnPreview.ForeColor = Color.White
-        btnPreview.Location = New Point(280, 208)
+        btnPreview.Location = New Point(259, 209)
         btnPreview.Name = "btnPreview"
         btnPreview.Size = New Size(129, 41)
         btnPreview.TabIndex = 6
@@ -105,7 +106,7 @@ Partial Class formLaporan
         ' 
         btnExportToPDF.BackColor = Color.Red
         btnExportToPDF.ForeColor = Color.White
-        btnExportToPDF.Location = New Point(488, 208)
+        btnExportToPDF.Location = New Point(422, 209)
         btnExportToPDF.Name = "btnExportToPDF"
         btnExportToPDF.Size = New Size(129, 41)
         btnExportToPDF.TabIndex = 7
@@ -116,7 +117,7 @@ Partial Class formLaporan
         ' 
         btnExportToExcel.BackColor = Color.FromArgb(CByte(0), CByte(192), CByte(0))
         btnExportToExcel.ForeColor = Color.White
-        btnExportToExcel.Location = New Point(694, 208)
+        btnExportToExcel.Location = New Point(585, 209)
         btnExportToExcel.Name = "btnExportToExcel"
         btnExportToExcel.Size = New Size(129, 41)
         btnExportToExcel.TabIndex = 8
@@ -132,12 +133,24 @@ Partial Class formLaporan
         dataGridLaporan.Size = New Size(1028, 342)
         dataGridLaporan.TabIndex = 9
         ' 
+        ' btnKembali
+        ' 
+        btnKembali.BackColor = Color.FromArgb(CByte(255), CByte(128), CByte(0))
+        btnKembali.ForeColor = Color.White
+        btnKembali.Location = New Point(744, 209)
+        btnKembali.Name = "btnKembali"
+        btnKembali.Size = New Size(129, 41)
+        btnKembali.TabIndex = 10
+        btnKembali.Text = "Back to Menu"
+        btnKembali.UseVisualStyleBackColor = False
+        ' 
         ' formLaporan
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.DarkBlue
         ClientSize = New Size(1093, 628)
+        Controls.Add(btnKembali)
         Controls.Add(dataGridLaporan)
         Controls.Add(btnExportToExcel)
         Controls.Add(btnExportToPDF)
@@ -165,4 +178,5 @@ Partial Class formLaporan
     Friend WithEvents btnExportToPDF As Button
     Friend WithEvents btnExportToExcel As Button
     Friend WithEvents dataGridLaporan As DataGridView
+    Friend WithEvents btnKembali As Button
 End Class

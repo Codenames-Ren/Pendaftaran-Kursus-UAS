@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "D:\\Mata-Kuliah\\Pemrograman Visual 1\\UAS\\Pendaftaran-Kursus-UAS\\Pendaftaran Kursus\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FA69F84A-6E76-4F79-8E70-C2EDA59B1342}|Pendaftaran Kursus\\Pendaftaran Kursus.vbproj|d:\\mata-kuliah\\pemrograman visual 1\\uas\\pendaftaran-kursus-uas\\pendaftaran kursus\\pendaftaran kursus\\api\\apiservice.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{FA69F84A-6E76-4F79-8E70-C2EDA59B1342}|Pendaftaran Kursus\\Pendaftaran Kursus.vbproj|solutionrelative:pendaftaran kursus\\api\\apiservice.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA69F84A-6E76-4F79-8E70-C2EDA59B1342}|Pendaftaran Kursus\\Pendaftaran Kursus.vbproj|d:\\mata-kuliah\\pemrograman visual 1\\uas\\pendaftaran-kursus-uas\\pendaftaran kursus\\pendaftaran kursus\\form\\formkursus.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{FA69F84A-6E76-4F79-8E70-C2EDA59B1342}|Pendaftaran Kursus\\Pendaftaran Kursus.vbproj|solutionrelative:pendaftaran kursus\\form\\formkursus.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA69F84A-6E76-4F79-8E70-C2EDA59B1342}|Pendaftaran Kursus\\Pendaftaran Kursus.vbproj|d:\\mata-kuliah\\pemrograman visual 1\\uas\\pendaftaran-kursus-uas\\pendaftaran kursus\\pendaftaran kursus\\form\\formkursus.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{FA69F84A-6E76-4F79-8E70-C2EDA59B1342}|Pendaftaran Kursus\\Pendaftaran Kursus.vbproj|solutionrelative:pendaftaran kursus\\form\\formkursus.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FA69F84A-6E76-4F79-8E70-C2EDA59B1342}|Pendaftaran Kursus\\Pendaftaran Kursus.vbproj|d:\\mata-kuliah\\pemrograman visual 1\\uas\\pendaftaran-kursus-uas\\pendaftaran kursus\\pendaftaran kursus\\form\\formlaporan.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{FA69F84A-6E76-4F79-8E70-C2EDA59B1342}|Pendaftaran Kursus\\Pendaftaran Kursus.vbproj|solutionrelative:pendaftaran kursus\\form\\formlaporan.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
@@ -11,28 +23,36 @@
       "RelativeMoniker": "D:0:0:{FA69F84A-6E76-4F79-8E70-C2EDA59B1342}|Pendaftaran Kursus\\Pendaftaran Kursus.vbproj|solutionrelative:pendaftaran kursus\\form\\formlaporan.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{FA69F84A-6E76-4F79-8E70-C2EDA59B1342}|Pendaftaran Kursus\\Pendaftaran Kursus.vbproj|d:\\mata-kuliah\\pemrograman visual 1\\uas\\pendaftaran-kursus-uas\\pendaftaran kursus\\pendaftaran kursus\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{FA69F84A-6E76-4F79-8E70-C2EDA59B1342}|Pendaftaran Kursus\\Pendaftaran Kursus.vbproj|solutionrelative:pendaftaran kursus\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FA69F84A-6E76-4F79-8E70-C2EDA59B1342}|Pendaftaran Kursus\\Pendaftaran Kursus.vbproj|d:\\mata-kuliah\\pemrograman visual 1\\uas\\pendaftaran-kursus-uas\\pendaftaran kursus\\pendaftaran kursus\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{FA69F84A-6E76-4F79-8E70-C2EDA59B1342}|Pendaftaran Kursus\\Pendaftaran Kursus.vbproj|solutionrelative:pendaftaran kursus\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA69F84A-6E76-4F79-8E70-C2EDA59B1342}|Pendaftaran Kursus\\Pendaftaran Kursus.vbproj|d:\\mata-kuliah\\pemrograman visual 1\\uas\\pendaftaran-kursus-uas\\pendaftaran kursus\\pendaftaran kursus\\controller\\kursuscontrol.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{FA69F84A-6E76-4F79-8E70-C2EDA59B1342}|Pendaftaran Kursus\\Pendaftaran Kursus.vbproj|solutionrelative:pendaftaran kursus\\controller\\kursuscontrol.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FA69F84A-6E76-4F79-8E70-C2EDA59B1342}|Pendaftaran Kursus\\Pendaftaran Kursus.vbproj|d:\\mata-kuliah\\pemrograman visual 1\\uas\\pendaftaran-kursus-uas\\pendaftaran kursus\\pendaftaran kursus\\form\\formpeserta.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{FA69F84A-6E76-4F79-8E70-C2EDA59B1342}|Pendaftaran Kursus\\Pendaftaran Kursus.vbproj|solutionrelative:pendaftaran kursus\\form\\formpeserta.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FA69F84A-6E76-4F79-8E70-C2EDA59B1342}|Pendaftaran Kursus\\Pendaftaran Kursus.vbproj|d:\\mata-kuliah\\pemrograman visual 1\\uas\\pendaftaran-kursus-uas\\pendaftaran kursus\\pendaftaran kursus\\form\\formpeserta.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{FA69F84A-6E76-4F79-8E70-C2EDA59B1342}|Pendaftaran Kursus\\Pendaftaran Kursus.vbproj|solutionrelative:pendaftaran kursus\\form\\formpeserta.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FA69F84A-6E76-4F79-8E70-C2EDA59B1342}|Pendaftaran Kursus\\Pendaftaran Kursus.vbproj|d:\\mata-kuliah\\pemrograman visual 1\\uas\\pendaftaran-kursus-uas\\pendaftaran kursus\\pendaftaran kursus\\form\\formpendaftarankursus.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{FA69F84A-6E76-4F79-8E70-C2EDA59B1342}|Pendaftaran Kursus\\Pendaftaran Kursus.vbproj|solutionrelative:pendaftaran kursus\\form\\formpendaftarankursus.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FA69F84A-6E76-4F79-8E70-C2EDA59B1342}|Pendaftaran Kursus\\Pendaftaran Kursus.vbproj|d:\\mata-kuliah\\pemrograman visual 1\\uas\\pendaftaran-kursus-uas\\pendaftaran kursus\\pendaftaran kursus\\controller\\pendaftarancontrol.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{FA69F84A-6E76-4F79-8E70-C2EDA59B1342}|Pendaftaran Kursus\\Pendaftaran Kursus.vbproj|solutionrelative:pendaftaran kursus\\controller\\pendaftarancontrol.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FA69F84A-6E76-4F79-8E70-C2EDA59B1342}|Pendaftaran Kursus\\Pendaftaran Kursus.vbproj|d:\\mata-kuliah\\pemrograman visual 1\\uas\\pendaftaran-kursus-uas\\pendaftaran kursus\\pendaftaran kursus\\controller\\kursuscontrol.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{FA69F84A-6E76-4F79-8E70-C2EDA59B1342}|Pendaftaran Kursus\\Pendaftaran Kursus.vbproj|solutionrelative:pendaftaran kursus\\controller\\kursuscontrol.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA69F84A-6E76-4F79-8E70-C2EDA59B1342}|Pendaftaran Kursus\\Pendaftaran Kursus.vbproj|d:\\mata-kuliah\\pemrograman visual 1\\uas\\pendaftaran-kursus-uas\\pendaftaran kursus\\pendaftaran kursus\\form\\formpeserta.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{FA69F84A-6E76-4F79-8E70-C2EDA59B1342}|Pendaftaran Kursus\\Pendaftaran Kursus.vbproj|solutionrelative:pendaftaran kursus\\form\\formpeserta.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA69F84A-6E76-4F79-8E70-C2EDA59B1342}|Pendaftaran Kursus\\Pendaftaran Kursus.vbproj|d:\\mata-kuliah\\pemrograman visual 1\\uas\\pendaftaran-kursus-uas\\pendaftaran kursus\\pendaftaran kursus\\controller\\pendaftarancontrol.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{FA69F84A-6E76-4F79-8E70-C2EDA59B1342}|Pendaftaran Kursus\\Pendaftaran Kursus.vbproj|solutionrelative:pendaftaran kursus\\controller\\pendaftarancontrol.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FA69F84A-6E76-4F79-8E70-C2EDA59B1342}|Pendaftaran Kursus\\Pendaftaran Kursus.vbproj|d:\\mata-kuliah\\pemrograman visual 1\\uas\\pendaftaran-kursus-uas\\pendaftaran kursus\\pendaftaran kursus\\form\\formpendaftarankursus.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
@@ -55,43 +75,82 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "APIService.vb",
+              "DocumentMoniker": "D:\\Mata-Kuliah\\Pemrograman Visual 1\\UAS\\Pendaftaran-Kursus-UAS\\Pendaftaran Kursus\\Pendaftaran Kursus\\API\\APIService.vb",
+              "RelativeDocumentMoniker": "Pendaftaran Kursus\\API\\APIService.vb",
+              "ToolTip": "D:\\Mata-Kuliah\\Pemrograman Visual 1\\UAS\\Pendaftaran-Kursus-UAS\\Pendaftaran Kursus\\Pendaftaran Kursus\\API\\APIService.vb",
+              "RelativeToolTip": "Pendaftaran Kursus\\API\\APIService.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-06-16T15:23:55.735Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Form1.vb",
+              "DocumentMoniker": "D:\\Mata-Kuliah\\Pemrograman Visual 1\\UAS\\Pendaftaran-Kursus-UAS\\Pendaftaran Kursus\\Pendaftaran Kursus\\Form1.vb",
+              "RelativeDocumentMoniker": "Pendaftaran Kursus\\Form1.vb",
+              "ToolTip": "D:\\Mata-Kuliah\\Pemrograman Visual 1\\UAS\\Pendaftaran-Kursus-UAS\\Pendaftaran Kursus\\Pendaftaran Kursus\\Form1.vb",
+              "RelativeToolTip": "Pendaftaran Kursus\\Form1.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-06-16T15:14:07.141Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "formKursus.vb",
+              "DocumentMoniker": "D:\\Mata-Kuliah\\Pemrograman Visual 1\\UAS\\Pendaftaran-Kursus-UAS\\Pendaftaran Kursus\\Pendaftaran Kursus\\Form\\formKursus.vb",
+              "RelativeDocumentMoniker": "Pendaftaran Kursus\\Form\\formKursus.vb",
+              "ToolTip": "D:\\Mata-Kuliah\\Pemrograman Visual 1\\UAS\\Pendaftaran-Kursus-UAS\\Pendaftaran Kursus\\Pendaftaran Kursus\\Form\\formKursus.vb*",
+              "RelativeToolTip": "Pendaftaran Kursus\\Form\\formKursus.vb*",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAgwFQAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-06-16T14:28:20.594Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "formKursus.vb [Design]",
+              "DocumentMoniker": "D:\\Mata-Kuliah\\Pemrograman Visual 1\\UAS\\Pendaftaran-Kursus-UAS\\Pendaftaran Kursus\\Pendaftaran Kursus\\Form\\formKursus.vb",
+              "RelativeDocumentMoniker": "Pendaftaran Kursus\\Form\\formKursus.vb",
+              "ToolTip": "D:\\Mata-Kuliah\\Pemrograman Visual 1\\UAS\\Pendaftaran-Kursus-UAS\\Pendaftaran Kursus\\Pendaftaran Kursus\\Form\\formKursus.vb [Design]*",
+              "RelativeToolTip": "Pendaftaran Kursus\\Form\\formKursus.vb [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-06-16T14:28:17.617Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "formLaporan.vb",
               "DocumentMoniker": "D:\\Mata-Kuliah\\Pemrograman Visual 1\\UAS\\Pendaftaran-Kursus-UAS\\Pendaftaran Kursus\\Pendaftaran Kursus\\Form\\formLaporan.vb",
               "RelativeDocumentMoniker": "Pendaftaran Kursus\\Form\\formLaporan.vb",
-              "ToolTip": "D:\\Mata-Kuliah\\Pemrograman Visual 1\\UAS\\Pendaftaran-Kursus-UAS\\Pendaftaran Kursus\\Pendaftaran Kursus\\Form\\formLaporan.vb*",
-              "RelativeToolTip": "Pendaftaran Kursus\\Form\\formLaporan.vb*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAOAAAAAAAAAA==",
+              "ToolTip": "D:\\Mata-Kuliah\\Pemrograman Visual 1\\UAS\\Pendaftaran-Kursus-UAS\\Pendaftaran Kursus\\Pendaftaran Kursus\\Form\\formLaporan.vb",
+              "RelativeToolTip": "Pendaftaran Kursus\\Form\\formLaporan.vb",
+              "ViewState": "AgIAAJcAAAAAAAAAAAArwKkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-06-16T12:10:09.222Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Form1.vb [Design]",
-              "DocumentMoniker": "D:\\Mata-Kuliah\\Pemrograman Visual 1\\UAS\\Pendaftaran-Kursus-UAS\\Pendaftaran Kursus\\Pendaftaran Kursus\\Form1.vb",
-              "RelativeDocumentMoniker": "Pendaftaran Kursus\\Form1.vb",
-              "ToolTip": "D:\\Mata-Kuliah\\Pemrograman Visual 1\\UAS\\Pendaftaran-Kursus-UAS\\Pendaftaran Kursus\\Pendaftaran Kursus\\Form1.vb [Design]",
-              "RelativeToolTip": "Pendaftaran Kursus\\Form1.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-06-15T10:26:19.689Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "formLaporan.vb [Design]",
               "DocumentMoniker": "D:\\Mata-Kuliah\\Pemrograman Visual 1\\UAS\\Pendaftaran-Kursus-UAS\\Pendaftaran Kursus\\Pendaftaran Kursus\\Form\\formLaporan.vb",
               "RelativeDocumentMoniker": "Pendaftaran Kursus\\Form\\formLaporan.vb",
-              "ToolTip": "D:\\Mata-Kuliah\\Pemrograman Visual 1\\UAS\\Pendaftaran-Kursus-UAS\\Pendaftaran Kursus\\Pendaftaran Kursus\\Form\\formLaporan.vb [Design]*",
-              "RelativeToolTip": "Pendaftaran Kursus\\Form\\formLaporan.vb [Design]*",
+              "ToolTip": "D:\\Mata-Kuliah\\Pemrograman Visual 1\\UAS\\Pendaftaran-Kursus-UAS\\Pendaftaran Kursus\\Pendaftaran Kursus\\Form\\formLaporan.vb [Design]",
+              "RelativeToolTip": "Pendaftaran Kursus\\Form\\formLaporan.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-06-16T11:43:46.494Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "formPeserta.vb [Design]",
               "DocumentMoniker": "D:\\Mata-Kuliah\\Pemrograman Visual 1\\UAS\\Pendaftaran-Kursus-UAS\\Pendaftaran Kursus\\Pendaftaran Kursus\\Form\\formPeserta.vb",
               "RelativeDocumentMoniker": "Pendaftaran Kursus\\Form\\formPeserta.vb",
@@ -103,7 +162,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "formPendaftaranKursus.vb",
               "DocumentMoniker": "D:\\Mata-Kuliah\\Pemrograman Visual 1\\UAS\\Pendaftaran-Kursus-UAS\\Pendaftaran Kursus\\Pendaftaran Kursus\\Form\\formPendaftaranKursus.vb",
               "RelativeDocumentMoniker": "Pendaftaran Kursus\\Form\\formPendaftaranKursus.vb",
@@ -116,7 +175,44 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
+              "Title": "Form1.vb [Design]",
+              "DocumentMoniker": "D:\\Mata-Kuliah\\Pemrograman Visual 1\\UAS\\Pendaftaran-Kursus-UAS\\Pendaftaran Kursus\\Pendaftaran Kursus\\Form1.vb",
+              "RelativeDocumentMoniker": "Pendaftaran Kursus\\Form1.vb",
+              "ToolTip": "D:\\Mata-Kuliah\\Pemrograman Visual 1\\UAS\\Pendaftaran-Kursus-UAS\\Pendaftaran Kursus\\Pendaftaran Kursus\\Form1.vb [Design]",
+              "RelativeToolTip": "Pendaftaran Kursus\\Form1.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-06-15T10:26:19.689Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "kursusControl.vb",
+              "DocumentMoniker": "D:\\Mata-Kuliah\\Pemrograman Visual 1\\UAS\\Pendaftaran-Kursus-UAS\\Pendaftaran Kursus\\Pendaftaran Kursus\\Controller\\kursusControl.vb",
+              "RelativeDocumentMoniker": "Pendaftaran Kursus\\Controller\\kursusControl.vb",
+              "ToolTip": "D:\\Mata-Kuliah\\Pemrograman Visual 1\\UAS\\Pendaftaran-Kursus-UAS\\Pendaftaran Kursus\\Pendaftaran Kursus\\Controller\\kursusControl.vb",
+              "RelativeToolTip": "Pendaftaran Kursus\\Controller\\kursusControl.vb",
+              "ViewState": "AgIAAIIAAAAAAAAAAAAwwJYAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-06-16T14:32:24.516Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "kursusControl.vb [Design]",
+              "DocumentMoniker": "D:\\Mata-Kuliah\\Pemrograman Visual 1\\UAS\\Pendaftaran-Kursus-UAS\\Pendaftaran Kursus\\Pendaftaran Kursus\\Controller\\kursusControl.vb",
+              "RelativeDocumentMoniker": "Pendaftaran Kursus\\Controller\\kursusControl.vb",
+              "ToolTip": "D:\\Mata-Kuliah\\Pemrograman Visual 1\\UAS\\Pendaftaran-Kursus-UAS\\Pendaftaran Kursus\\Pendaftaran Kursus\\Controller\\kursusControl.vb [Design]",
+              "RelativeToolTip": "Pendaftaran Kursus\\Controller\\kursusControl.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-06-15T17:12:34.369Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "formPeserta.vb",
               "DocumentMoniker": "D:\\Mata-Kuliah\\Pemrograman Visual 1\\UAS\\Pendaftaran-Kursus-UAS\\Pendaftaran Kursus\\Pendaftaran Kursus\\Form\\formPeserta.vb",
               "RelativeDocumentMoniker": "Pendaftaran Kursus\\Form\\formPeserta.vb",
@@ -124,12 +220,11 @@
               "RelativeToolTip": "Pendaftaran Kursus\\Form\\formPeserta.vb",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-06-16T07:30:18.355Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-16T07:30:18.355Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
               "Title": "PendaftaranControl.vb [Design]",
               "DocumentMoniker": "D:\\Mata-Kuliah\\Pemrograman Visual 1\\UAS\\Pendaftaran-Kursus-UAS\\Pendaftaran Kursus\\Pendaftaran Kursus\\Controller\\PendaftaranControl.vb",
               "RelativeDocumentMoniker": "Pendaftaran Kursus\\Controller\\PendaftaranControl.vb",
@@ -141,7 +236,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
               "Title": "formPendaftaranKursus.vb [Design]",
               "DocumentMoniker": "D:\\Mata-Kuliah\\Pemrograman Visual 1\\UAS\\Pendaftaran-Kursus-UAS\\Pendaftaran Kursus\\Pendaftaran Kursus\\Form\\formPendaftaranKursus.vb",
               "RelativeDocumentMoniker": "Pendaftaran Kursus\\Form\\formPendaftaranKursus.vb",
@@ -149,18 +244,6 @@
               "RelativeToolTip": "Pendaftaran Kursus\\Form\\formPendaftaranKursus.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-06-16T02:55:17.857Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "kursusControl.vb [Design]",
-              "DocumentMoniker": "D:\\Mata-Kuliah\\Pemrograman Visual 1\\UAS\\Pendaftaran-Kursus-UAS\\Pendaftaran Kursus\\Pendaftaran Kursus\\Controller\\kursusControl.vb",
-              "RelativeDocumentMoniker": "Pendaftaran Kursus\\Controller\\kursusControl.vb",
-              "ToolTip": "D:\\Mata-Kuliah\\Pemrograman Visual 1\\UAS\\Pendaftaran-Kursus-UAS\\Pendaftaran Kursus\\Pendaftaran Kursus\\Controller\\kursusControl.vb [Design]",
-              "RelativeToolTip": "Pendaftaran Kursus\\Controller\\kursusControl.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-06-15T17:12:34.369Z",
               "EditorCaption": " [Design]"
             }
           ]

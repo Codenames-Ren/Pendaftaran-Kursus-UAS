@@ -3,15 +3,20 @@ Imports iTextSharp.text
 Imports iTextSharp.text.pdf
 Imports System.IO
 Imports ClosedXML.Excel
-
 Public Class formLaporan
+
     Private Sub formLaporan_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cmbJenisData.Items.AddRange(New String() {"Peserta", "Kursus", "Pendaftaran"})
-        cmbJenisData.SelectedIndex = 0
+        cmbJenisData.SelectedIndex = -1
         dtpDateFrom.Value = Date.Today.AddMonths(-1)
         dtpDateTo.Value = Date.Today
     End Sub
     Private Sub btnPreview_Click(sender As Object, e As EventArgs) Handles btnPreview.Click
+        If cmbJenisData.SelectedIndex = -1 Then
+            MessageBox.Show("Silakan pilih data yang ingin ditampilkan terlebih dahulu!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Exit Sub
+        End If
+
         Dim jenisData As String = cmbJenisData.SelectedItem.ToString()
         Dim tanggalAwal As Date = dtpDateFrom.Value.Date
         Dim tanggalAkhir As Date = dtpDateTo.Value.Date.AddDays(1)
@@ -24,8 +29,13 @@ Public Class formLaporan
 
 
             Case "Kursus"
-                query = "SELECT kode_kursus, nama_kursus, jadwal_hari, durasi, lama_kursus, mentor, created_on
-                         FROM kursus WHERE is_deleted IS NULL AND created_on BETWEEN @awal AND @akhir"
+                query = "SELECT kode_kursus, nama_kursus, CASE jadwal_hari
+                         WHEN 1 THEN 'Senin' WHEN 2 THEN 'Selasa' WHEN 3 THEN 'Rabu'
+                         WHEN 4 THEN 'Kamis' WHEN 5 THEN 'Jumat' WHEN 6 THEN 'Sabtu'
+                         WHEN 7 THEN 'Minggu' ELSE 'Tidak Diketahui' END AS jadwal_hari,
+                         durasi || ' Jam' AS durasi, lama_kursus || ' Minggu' AS lama_kursus,
+                         mentor, created_on FROM kursus
+                         WHERE is_deleted IS NULL AND created_on BETWEEN @awal AND @akhir"
 
 
             Case "Pendaftaran"
@@ -57,14 +67,14 @@ Public Class formLaporan
             MessageBox.Show("Tidak ada data untuk di export.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Exit Sub
         End If
-        Dim saveDialog As New SaveFileDialog()
+        Dim saveDialog As New SaveFileDialog
         saveDialog.Filter = "Excel Files (*.xlsx)|*.xlsx"
         saveDialog.Title = "Simpan Laporan Excel"
-        saveDialog.FileName = $"Laporan_{cmbJenisData.SelectedItem}_{DateTime.Now:yyyyMMdd}.xlsx"
+        saveDialog.FileName = $"Laporan_{cmbJenisData.SelectedItem}_{Date.Now:yyyyMMdd}.xlsx"
 
-        If saveDialog.ShowDialog() = DialogResult.OK Then
+        If saveDialog.ShowDialog = DialogResult.OK Then
             Try
-                Dim wb As New XLWorkbook()
+                Dim wb As New XLWorkbook
                 Dim ws = wb.Worksheets.Add("Laporan")
 
                 ' Header
@@ -78,10 +88,10 @@ Public Class formLaporan
                 For row = 0 To dataGridLaporan.Rows.Count - 1
                     For col = 0 To dataGridLaporan.Columns.Count - 1
                         Dim value = dataGridLaporan.Rows(row).Cells(col).Value
-                        ws.Cell(row + 2, col + 1).Value = If(value IsNot Nothing, value.ToString(), "")
+                        ws.Cell(row + 2, col + 1).Value = If(value IsNot Nothing, value.ToString, "")
                     Next
                 Next
-                ws.Columns().AdjustToContents()
+                ws.Columns.AdjustToContents()
 
                 wb.SaveAs(saveDialog.FileName)
                 MessageBox.Show("Data berhasil diexport ke Excel!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -152,5 +162,9 @@ Public Class formLaporan
                 MessageBox.Show("Gagal mengexport data ke PDF: " & ex.Message)
             End Try
         End If
+    End Sub
+
+    Private Sub btnKembali_Click(sender As Object, e As EventArgs) Handles btnKembali.Click
+        Me.Close()
     End Sub
 End Class
