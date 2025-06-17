@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("Pendaftaran Kursus"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aa2bbe47cebaf65816e9dd03fde96e40fee3cbd1"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bd01ba77ca61fe14e298e993b184469599079239"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("Pendaftaran Kursus"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("Pendaftaran Kursus"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _

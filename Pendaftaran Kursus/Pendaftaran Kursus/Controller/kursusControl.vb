@@ -152,5 +152,4 @@ Public Class kursusControl
         End If
     End Sub
 
-
 End Class

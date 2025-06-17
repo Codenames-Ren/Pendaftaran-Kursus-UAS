@@ -26,16 +26,52 @@ Public Class formKursus
             Exit Sub
         End If
 
-        If Not IsNumeric(txtDurasi.Text) Or Not IsNumeric(txtLamaKursus.Text) Then
+        'Validasi angka untuk value > 0
+        Dim durasiInt As Integer
+        Dim lamaKursusInt As Integer
+        If Not Integer.TryParse(txtDurasi.Text, durasiInt) Or Not Integer.TryParse(txtLamaKursus.Text, lamaKursusInt) Then
             MessageBox.Show("Durasi dan Lama Kursus harus berupa angka tanpa huruf!", "Validasi", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Exit Sub
+        End If
+
+        If durasiInt <= 0 Or lamaKursusInt <= 0 Then
+            MessageBox.Show("Durasi dan Lama Kursus tidak valid!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Exit Sub
         End If
 
         Try
             Dim conn = DBConnection.OpenConnection()
             Dim cmd As NpgsqlCommand
+            Dim isInsert = (idEdit = 0)
 
-            Dim jadwalVal As Integer = Val(cmbJadwalHari.SelectedItem.ToString().Split(" "c)(0))
+            'Validasi kode kursus
+            If isInsert Then
+                Dim checkQuery As String = "SELECT COUNT(*) FROM kursus WHERE kode_kursus = @kode"
+                Dim checkCmd = New NpgsqlCommand(checkQuery, conn)
+                checkCmd.Parameters.AddWithValue("@kode", txtKodeKursus.Text)
+                If Convert.ToInt32(checkCmd.ExecuteScalar()) > 0 Then
+                    MessageBox.Show("Kode Kursus sudah digunakan!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                    Exit Sub
+                End If
+
+            Else
+                'Validasi saat edit
+                Dim getOldCmd = New NpgsqlCommand("SELECT kode_kursus FROM kursus WHERE id = @id", conn)
+                getOldCmd.Parameters.AddWithValue("@id", idEdit)
+                Dim oldKode = getOldCmd.ExecuteScalar().ToString()
+
+                If txtKodeKursus.Text.Trim() <> oldKode Then
+                    Dim checkCmd = New NpgsqlCommand("SELECT COUNT(*) FROM kursus WHERE kode_kursus = @kode", conn)
+                    checkCmd.Parameters.AddWithValue("@kode", txtKodeKursus.Text)
+
+                    If Convert.ToInt32(checkCmd.ExecuteScalar()) > 0 Then
+                        MessageBox.Show("Kode Kursus sudah digunakan!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                        Exit Sub
+                    End If
+                End If
+            End If
+
+                Dim jadwalVal As Integer = Val(cmbJadwalHari.SelectedItem.ToString().Split(" "c)(0))
 
             If idEdit = 0 Then
                 Dim query As String = "INSERT INTO public.kursus (kode_kursus, nama_kursus, jadwal_hari, durasi, lama_kursus, mentor, created_by, created_on)
@@ -62,22 +98,24 @@ Public Class formKursus
 
             MessageBox.Show("Data berhasil disimpan!")
 
-            Try
-                Dim api As New APIService()
-                Dim dataProperties As String = txtKodeKursus.Text.Trim() & "|" &
-                                   txtNamaKursus.Text.Trim() & "|" &
-                                   cmbJadwalHari.SelectedItem.ToString() & "|" &
-                                   txtDurasi.Text.Trim() & "|" &
-                                   txtLamaKursus.Text.Trim() & "|" &
-                                   txtMentorKursus.Text.Trim() & "|" & "testing"
+            If isInsert Then
+                Try
+                    Dim api As New APIService()
+                    Dim dataProperties As String = txtKodeKursus.Text.Trim() & "|" &
+                                       txtNamaKursus.Text.Trim() & "|" &
+                                       cmbJadwalHari.SelectedItem.ToString() & "|" &
+                                       txtDurasi.Text.Trim() & "|" &
+                                       txtLamaKursus.Text.Trim() & "|" &
+                                       txtMentorKursus.Text.Trim() & "|" & "testing"
 
-                api.send("kursus", dataProperties)
-                MessageBox.Show("Pengiriman data ke API berhasil!")
-            Catch exApi As Exception
-                MessageBox.Show("Data tersimpan, tapi gagal mengirim ke API: " & exApi.Message, "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-                MessageBox.Show("Gagal kirim ke API: " & exApi.Message)
-                Console.WriteLine("Error kirim API: " & exApi.ToString())
-            End Try
+                    api.send("kursus", dataProperties)
+                    MessageBox.Show("Pengiriman data ke API berhasil!")
+                Catch exApi As Exception
+                    MessageBox.Show("Data tersimpan, tapi gagal mengirim ke API: " & exApi.Message, "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                    Console.WriteLine("Error kirim API: " & exApi.ToString())
+                End Try
+            End If
+
             Me.Close()
         Catch ex As Exception
             MessageBox.Show("Gagal menyimpan data: " & ex.Message)

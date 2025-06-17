@@ -18,6 +18,36 @@ Public Class formPeserta
             Dim cmd As New NpgsqlCommand()
             Dim isInsert As Boolean = (idEdit = 0)
 
+            'Check kode peserta
+            If isInsert Then
+                ' Validasi duplikat saat insert
+                Dim checkQuery As String = "SELECT COUNT(*) FROM peserta WHERE kode_peserta = @kode"
+                Dim checkCmd = New NpgsqlCommand(checkQuery, conn)
+                checkCmd.Parameters.AddWithValue("@kode", txtKodePeserta.Text)
+                Dim exists As Integer = Convert.ToInt32(checkCmd.ExecuteScalar())
+                If exists > 0 Then
+                    MessageBox.Show("Kode Peserta sudah terdaftar!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                    Exit Sub
+                End If
+            Else
+                ' Validasi hanya jika kode peserta diubah
+                Dim getOldCmd = New NpgsqlCommand("SELECT kode_peserta FROM peserta WHERE id = @id", conn)
+                getOldCmd.Parameters.AddWithValue("@id", idEdit)
+                Dim oldKode As String = getOldCmd.ExecuteScalar().ToString()
+
+                If txtKodePeserta.Text.Trim() <> oldKode Then
+                    ' Jika kode berubah, cek duplikat
+                    Dim checkCmd = New NpgsqlCommand("SELECT COUNT(*) FROM peserta WHERE kode_peserta = @kode", conn)
+                    checkCmd.Parameters.AddWithValue("@kode", txtKodePeserta.Text)
+                    Dim exists As Integer = Convert.ToInt32(checkCmd.ExecuteScalar())
+                    If exists > 0 Then
+                        MessageBox.Show("Kode Peserta sudah terdaftar!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                        Exit Sub
+                    End If
+                End If
+            End If
+
+
             If isInsert Then
                 ' Tambah data
                 Dim query As String = "INSERT INTO public.peserta (kode_peserta, nama_peserta, alamat, no_handphone, email, created_by, created_on) 

@@ -74,7 +74,26 @@ Public Class formPendaftaranKursus
     End Sub
 
     Private Function GenerateKodeAktif() As String
-        Return "GLB-" & DateTime.Now.ToString("yyMMddHHmmss")
+        Dim kode As String
+        Dim rnd As New Random()
+
+        Using conn = DBConnection.OpenConnection()
+            Do
+                Dim randomNumber = rnd.Next(1000, 10000)
+                kode = "ARCH-" & randomNumber
+
+                Using cmd As New NpgsqlCommand("SELECT COUNT(*) FROM kursus_berlangsung WHERE kode_aktif = @kode", conn)
+                    cmd.Parameters.AddWithValue("@kode", kode)
+
+                    Dim count = Convert.ToInt32(cmd.ExecuteScalar())
+                    If count = 0 Then
+                        Exit Do
+                    End If
+                End Using
+            Loop
+        End Using
+
+        Return kode
     End Function
 
     Private Sub btnReset_Click(sender As Object, e As EventArgs) Handles btnReset.Click

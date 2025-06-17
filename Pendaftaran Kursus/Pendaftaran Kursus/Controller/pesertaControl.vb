@@ -132,4 +132,5 @@ Public Class pesertaControl
     Private Sub txtGridSearch_TextChanged(sender As Object, e As EventArgs) Handles txtGridSearch.TextChanged
         btnGridSearch.PerformClick()
     End Sub
+
 End Class

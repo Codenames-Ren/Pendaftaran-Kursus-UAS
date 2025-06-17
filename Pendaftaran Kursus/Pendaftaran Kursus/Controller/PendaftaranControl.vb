@@ -124,37 +124,4 @@ Public Class PendaftaranControl
         LoadDataPendaftaran()
     End Sub
 
-    'Private Sub DataGridPendaftaran_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridPendaftaran.CellDoubleClick
-    '    If e.RowIndex < 0 OrElse e.ColumnIndex < 0 Then Exit Sub
-
-    '    Dim row = DataGridPendaftaran.Rows(e.RowIndex)
-    '    If row.Cells("id") Is Nothing OrElse IsDBNull(row.Cells("id").Value) Then
-    '        MessageBox.Show("Pilih data yang valid untuk di update!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-    '        Exit Sub
-    '    End If
-
-    '    Try
-    '        Dim editForm As New formPendaftaranKursus()
-
-    '        editForm.LoadComboPeserta()
-    '        editForm.LoadComboKursus()
-
-    '        editForm.idEdit = Convert.ToInt32(row.Cells("id").Value)
-
-    '        editForm.SetSelectedValues(
-    '        kodeAktif:=row.Cells("kode_aktif").Value.ToString(),
-    '        namaPeserta:=row.Cells("nama_peserta").Value.ToString(),
-    '        namaKursus:=row.Cells("nama_kursus").Value.ToString(),
-    '        subTotal:=row.Cells("sub_total").Value.ToString(),
-    '        biayaPendaftaran:="75000",
-    '        totalBiaya:=row.Cells("total_biaya").Value.ToString(),
-    '        tanggalAktif:=Convert.ToDateTime(row.Cells("tanggal_aktif").Value))
-
-    '        AddHandler editForm.FormClosed, AddressOf refreshGrid
-    '        editForm.Show()
-
-    '    Catch ex As Exception
-    '        MessageBox.Show("Gagal memuat data untuk di update: " & ex.Message)
-    '    End Try
-    'End Sub
 End Class
