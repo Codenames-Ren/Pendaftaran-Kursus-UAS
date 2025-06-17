@@ -18,30 +18,45 @@ Public Class formLaporan
         End If
 
         Dim jenisData As String = cmbJenisData.SelectedItem.ToString()
-        Dim tanggalAwal As Date = dtpDateFrom.Value.Date
-        Dim tanggalAkhir As Date = dtpDateTo.Value.Date.AddDays(1)
+        Dim tanggalAwal As DateTime = dtpDateFrom.Value.Date
+        Dim tanggalAkhir As DateTime = dtpDateTo.Value.Date.AddDays(1)
+
+        If tanggalAwal > tanggalAkhir.AddDays(-1) Then
+            MessageBox.Show("Tanggal awal tidak boleh lebih dari tanggal akhir!", "Validasi Tanggal", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Exit Sub
+        End If
+
 
         Dim query As String = ""
         Select Case jenisData
             Case "Peserta"
                 query = "SELECT kode_peserta, nama_peserta, alamat, no_handphone, email, created_on
-                         FROM peserta WHERE is_deleted IS NULL AND created_on BETWEEN @awal AND @akhir"
-
+                 FROM peserta 
+                 WHERE (is_deleted IS NULL OR is_deleted = 0)
+                 AND created_on >= @awal AND created_on < @akhir"
 
             Case "Kursus"
-                query = "SELECT kode_kursus, nama_kursus, CASE jadwal_hari
-                         WHEN 1 THEN 'Senin' WHEN 2 THEN 'Selasa' WHEN 3 THEN 'Rabu'
-                         WHEN 4 THEN 'Kamis' WHEN 5 THEN 'Jumat' WHEN 6 THEN 'Sabtu'
-                         WHEN 7 THEN 'Minggu' ELSE 'Tidak Diketahui' END AS jadwal_hari,
-                         durasi || ' Jam' AS durasi, lama_kursus || ' Minggu' AS lama_kursus,
-                         mentor, created_on FROM kursus
-                         WHERE is_deleted IS NULL AND created_on BETWEEN @awal AND @akhir"
-
+                query = "SELECT kode_kursus, nama_kursus, 
+                 CASE jadwal_hari
+                     WHEN 1 THEN 'Senin' WHEN 2 THEN 'Selasa' WHEN 3 THEN 'Rabu'
+                     WHEN 4 THEN 'Kamis' WHEN 5 THEN 'Jumat' WHEN 6 THEN 'Sabtu'
+                     WHEN 7 THEN 'Minggu' ELSE 'Tidak Diketahui' 
+                 END AS jadwal_hari,
+                 durasi || ' Jam' AS durasi, lama_kursus || ' Minggu' AS lama_kursus,
+                 mentor, created_on 
+                 FROM kursus
+                 WHERE (is_deleted IS NULL OR is_deleted = 0)
+                 AND created_on >= @awal AND created_on < @akhir"
 
             Case "Pendaftaran"
-                query = "SELECT kb.kode_aktif, p.nama_peserta, k.nama_kursus, kb.biaya_pendaftaran, kb.sub_total, kb.total_biaya, kb.tanggal_aktif, kb.created_on
-                         FROM kursus_berlangsung kb JOIN peserta p ON p.id = kb.id_peserta
-                         JOIN kursus k ON k.id = kb.id_kursus WHERE kb.is_deleted IS NULL AND kb.created_on BETWEEN @awal AND @akhir"
+                query = "SELECT kb.kode_aktif, p.nama_peserta, k.nama_kursus, 
+                 kb.biaya_pendaftaran, kb.sub_total, kb.total_biaya, 
+                 kb.tanggal_aktif, kb.created_on
+                 FROM kursus_berlangsung kb 
+                 JOIN peserta p ON p.id = kb.id_peserta
+                 JOIN kursus k ON k.id = kb.id_kursus 
+                 WHERE (kb.is_deleted IS NULL OR kb.is_deleted = 0)
+                 AND kb.created_on >= @awal AND kb.created_on < @akhir"
         End Select
 
         Try
@@ -56,7 +71,6 @@ Public Class formLaporan
             dataGridLaporan.DataSource = table
         Catch ex As Exception
             MessageBox.Show("Gagal memuat data laporan: " & ex.Message, "error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-
         Finally
             DBConnection.closeConnection()
         End Try
