@@ -8,7 +8,7 @@ Public Class formLaporan
     Private Sub formLaporan_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cmbJenisData.Items.AddRange(New String() {"Peserta", "Kursus", "Pendaftaran"})
         cmbJenisData.SelectedIndex = -1
-        dtpDateFrom.Value = Date.Today.AddMonths(-1)
+        dtpDateFrom.Value = Date.Today
         dtpDateTo.Value = Date.Today
     End Sub
     Private Sub btnPreview_Click(sender As Object, e As EventArgs) Handles btnPreview.Click
@@ -51,7 +51,7 @@ Public Class formLaporan
             Case "Pendaftaran"
                 query = "SELECT kb.kode_aktif, p.nama_peserta, k.nama_kursus, 
                  kb.biaya_pendaftaran, kb.sub_total, kb.total_biaya, 
-                 kb.tanggal_aktif, kb.created_on
+                 kb.tanggal_aktif as mulai_kursus, kb.created_on
                  FROM kursus_berlangsung kb 
                  JOIN peserta p ON p.id = kb.id_peserta
                  JOIN kursus k ON k.id = kb.id_kursus 

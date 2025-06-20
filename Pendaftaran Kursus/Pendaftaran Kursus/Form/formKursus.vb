@@ -34,8 +34,13 @@ Public Class formKursus
             Exit Sub
         End If
 
-        If durasiInt <= 0 Or lamaKursusInt <= 0 Then
-            MessageBox.Show("Durasi dan Lama Kursus tidak valid!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        If durasiInt <= 0 Then
+            MessageBox.Show("Durasi Kursus tidak valid!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Exit Sub
+        End If
+
+        If lamaKursusInt <= 0 Then
+            MessageBox.Show("Lama Kursus tidak valid!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Exit Sub
         End If
 

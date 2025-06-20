@@ -9,7 +9,7 @@ Public Class PendaftaranControl
         Try
             Dim conn = DBConnection.OpenConnection()
             Dim query As String = "SELECT kb.id, kb.kode_aktif, p.nama_peserta, k.nama_kursus, kb.biaya_pendaftaran, kb.sub_total, kb.total_biaya,
-                                   kb.tanggal_aktif FROM kursus_berlangsung kb 
+                                   kb.tanggal_aktif as mulai_kursus FROM kursus_berlangsung kb 
                                    JOIN peserta p ON p.id = kb.id_peserta JOIN kursus k ON k.id = kb.id_kursus
                                    WHERE kb.is_deleted IS NULL or kb.is_deleted = 0 
                                    ORDER BY kb.id ASC"
@@ -42,7 +42,7 @@ Public Class PendaftaranControl
 
         Try
             Dim conn = DBConnection.OpenConnection()
-            Dim query = "SELECT kb.id, kb.kode_aktif, p.nama_peserta, k.nama_kursus, kb.biaya_pendaftaran, kb.sub_total, kb.total_biaya, kb.tanggal_aktif
+            Dim query = "SELECT kb.id, kb.kode_aktif, p.nama_peserta, k.nama_kursus, kb.biaya_pendaftaran, kb.sub_total, kb.total_biaya, kb.tanggal_aktif as mulai_kursus
                          FROM kursus_berlangsung kb JOIN peserta p ON p.id = kb.id_peserta
                          JOIN kursus k ON k.id = kb.id_kursus WHERE (kb.is_deleted IS NULL OR kb.is_deleted = 0)
                          AND (kb.kode_aktif ILIKE @kw OR p.nama_peserta ILIKE @kw OR k.nama_kursus ILIKE @kw)
